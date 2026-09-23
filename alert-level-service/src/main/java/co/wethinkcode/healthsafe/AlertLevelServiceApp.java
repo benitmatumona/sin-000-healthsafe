@@ -1,6 +1,8 @@
 package co.wethinkcode.healthsafe;
 
 import io.javalin.Javalin;
+import java.util.Map;
+
 
 public class AlertLevelServiceApp {
 
@@ -10,10 +12,8 @@ public class AlertLevelServiceApp {
         app.get("/health", ctx -> ctx.result("OK"));
 
     app.get("/alert-level", ctx -> {
-        List<Map<String, Object>> members = List.of(
-            Map.of("level", "0"),
-        );
-        ctx.json(members);
+        Map<String, Object> level = Map.of("level", 0);
+        ctx.json(level);
     });
 
 
