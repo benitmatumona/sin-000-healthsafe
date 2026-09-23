@@ -9,6 +9,14 @@ public class AlertLevelServiceApp {
 
         app.get("/health", ctx -> ctx.result("OK"));
 
+    app.get("/alert-level", ctx -> {
+        List<Map<String, Object>> members = List.of(
+            Map.of("level", "0"),
+        );
+        ctx.json(members);
+    });
+
+
         // TODO (Tracks the hospital Emergency Status (0-8, 8 = full Code Blue).)
         // Add domain endpoints for alert-level-service here.
     }
