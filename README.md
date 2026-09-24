@@ -4,7 +4,6 @@
 
 Hospital ward status and emergency staffing schedules.
 
-
 Domain entities: wards, wings, specialist departments.
 
 Every class in this repo lives in a single flat package, `co.wethinkcode.healthsafe`. HealthSafe is built
